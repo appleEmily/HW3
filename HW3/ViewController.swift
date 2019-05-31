@@ -9,12 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var text1: UITextField!
+    
+    @IBOutlet weak var text2: UITextField!
+    
+    @IBOutlet weak var label: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    
+    
+    
+    @IBAction func calculate(_ sender: Any) {
+        plus()
+        return
+        
+    }
+    func plus() {
+        let first:Int = Int(text1.text!)!
+        let second:Int = Int(text2.text!)!
+        var answer:Int = first + second
+        let result:String = String(Int(answer))
+        label.text = result
+    }
+    
+    //メゾットって
+    // 戻り値
 
 }
 
