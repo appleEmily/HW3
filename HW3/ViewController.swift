@@ -28,16 +28,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func calculate(_ sender: Any) {
-        plus()
-        return
-        
-    }
-    func plus() {
         let first:Int = Int(text1.text!)!
         let second:Int = Int(text2.text!)!
         var answer:Int = first + second
         let result:String = String(Int(answer))
         label.text = result
+        return
+        
     }
     
     //メゾットって
