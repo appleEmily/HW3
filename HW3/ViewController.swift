@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  HW3
-//
-//  Created by 野崎絵未里 on 2019/05/31.
-//  Copyright © 2019年 野崎絵未里. All rights reserved.
-//
 
 import UIKit
 
@@ -27,18 +20,33 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func calculate(_ sender: Any) {
-        let first:Int = Int(text1.text!)!
-        let second:Int = Int(text2.text!)!
-        var answer:Int = first + second
-        let result:String = String(Int(answer))
-        label.text = result
+    @IBAction func calculate() {
+        //        if text1.text == "", text2.text == "" {
+        //
+        //        } else if text1.text == "" {
+        //        } else if text2.text == "" {
+        //        } else {
+        //            let second:Int = Int(text2.text!)!
+        //            let first:Int = Int(text1.text!)!
+        //
+        //            let answer:Int = first + second
+        //            let result:String = String(Int(answer))
+        //            label.text = result
+        //        }
+        //        print(text1)
+        //        print(text2)
+        //        return
+        //    }
+        //スッキリかけた・文字入れると落ちる
+        if text1.text != "" && text2.text != "" {
+            let second:Int = Int(text2.text!)!
+            let first:Int = Int(text1.text!)!
+            
+            let answer:Int = first + second
+            let result:String = String(Int(answer))
+            label.text = result
+            
+        }
         return
-        
     }
-    
-    //メゾットって
-    // 戻り値
-
 }
-
